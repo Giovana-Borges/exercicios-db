@@ -23,13 +23,16 @@ public class CalculaRendimento {
         taxaReferencial = scan.nextFloat();
 //        System.out.println("O resultado do investimento inicial de " + valorInicial);
 
-        double resultadoCalculaTaxa = calculaTaxa(taxaSelic, taxaReferencial, somaTaxas, valorInicial, qtdMeses);
-        System.out.println(resultadoCalculaTaxa);
+        float resultadoCalculaTaxa = calculaTaxa(taxaSelic, taxaReferencial, somaTaxas, valorInicial, qtdMeses);
+        System.out.println("============================================================================");
+        System.out.println("O investimento de " + valorInicial + " reais, por " + qtdMeses +
+                " meses, renderá: "+ resultadoCalculaTaxa + "reais." );
+        System.out.println("============================================================================");
 
     }
-    public static double calculaTaxa(float taxaSelic, float taxaReferencial, float somaTaxas, double valorInicial, int qtdMeses){
+    public static float calculaTaxa(float taxaSelic, float taxaReferencial, float somaTaxas, double valorInicial, int qtdMeses){
 //        DecimalFormat df = new DecimalFormat("#,###,###");
-
+        System.out.println("============================================================================");
         if (taxaSelic < 8.5){
             taxaSelic = (float) ((taxaSelic * 0.7) / 12);
             System.out.println("TAXA SELIC EM %: "+ taxaSelic);
@@ -60,16 +63,16 @@ public class CalculaRendimento {
          3.A soma de cada condição deverá ser contida dentro de cada if, para não imprimir as duas independente do caso usado.
          4.
         **/
+        System.out.println("============================================================================");
 //      CALCULANDO RENDIMENTO
         float resultadoRendimento;
 //      M = C (1 + i * t)
         resultadoRendimento = (float) valorInicial * (1 + somaTaxas * qtdMeses);
-        System.out.println("O investimento de " + valorInicial + " reais, por " + qtdMeses +
-                " meses, renderá: "+ resultadoRendimento + " reais ao mês." );
 
-        double totalRendimento =  resultadoRendimento - valorInicial;
-        System.out.println("RENDIMENTO = " + totalRendimento);
-        return 1;
+        float totalRendimento = (float) (resultadoRendimento - valorInicial);
+        System.out.println("TOTAL RENDIMENTO = " + totalRendimento);
+        System.out.println("RENDIMENTO OBTIDO A CADA MÊS = " + totalRendimento / qtdMeses);
+        return resultadoRendimento;
     }
 
 }

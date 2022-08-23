@@ -11,8 +11,8 @@ public class SerieFibonacci {
         numero =scan.nextInt();
 
         int resultadoSerie = imprimeSerie(numero, i);
-        System.out.println("Resultado do método: " + resultadoSerie);
-
+        System.out.println(resultadoSerie);
+        //Imprime o último número da contagem (numero = 9 entao último numero = 34)
     }
     public static int calculaSerie(int n){
         int f = 0;
@@ -32,11 +32,11 @@ public class SerieFibonacci {
         return (f);
     }
     public static int imprimeSerie(int numero, int i){
-        for(i = 0; i <= numero; i++){
+        for(i = 1; i <= numero; i++){
             System.out.printf("%d", calculaSerie(i));
             System.out.println(" ");
         }
-        return 0;
+        return calculaSerie(i);
     }
 }
 
