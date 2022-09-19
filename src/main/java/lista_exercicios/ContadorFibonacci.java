@@ -8,12 +8,12 @@ public class ContadorFibonacci {
         int numLimite;
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Digite um número para calcular a série Fibonacci: ");
+        System.out.println("Digite o número que deseja calcular a série Fibonacci: ");
         numero = scan.nextInt();
-//        System.out.println("A contagem não pode passar do valor: ");
-//        numLimite = scan.nextInt();
+        System.out.println("A contagem não pode passar do valor: ");
+        numLimite = scan.nextInt();
 
-        int resultadoSerie = imprimeSerie(numero, i);
+        int resultadoSerie = imprimeSerie(numero, numLimite, i);
         System.out.println(resultadoSerie);
     }
     public static int calculaSerie(int n){
@@ -34,9 +34,9 @@ public class ContadorFibonacci {
         }
         return (f);
     }
-    public static int imprimeSerie(int numero, int i) {
+    public static int imprimeSerie(int numero, int numLimite, int i) {
         //como usar while para parar a contagem em determinado valor
-        for(i = 1; i <= numero; i++){
+        for(i = 1; numLimite <= numero; i++){
             System.out.printf("%d", calculaSerie(i));
             System.out.println(" ");
         }

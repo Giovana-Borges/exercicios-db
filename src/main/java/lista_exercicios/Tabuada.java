@@ -9,15 +9,24 @@ public class Tabuada {
         numero = scan.nextInt();
 
         System.out.println("Tabuada do número " + numero);
-        int verificaTabuada = tabuada(numero);
+        int verificaTabuada = multiplicaNumero(numero);
         System.out.println("Return do método: " + verificaTabuada);
+        imprimeTabuada(numero);
     }
-    public static int tabuada(int numero){
+    public static int multiplicaNumero(int numero){
         for( int i = numero; i <= numero; i++){
             for(int j = 1; j <= 10; j++){
-                System.out.println(i + " x " + j + " = " + (i*j));
+               numero = i*j;
             }
         }
-        return 0;
+        return numero;
+    }
+    private static void imprimeTabuada(int numero){
+        for( int i = numero; i <= numero; i++){
+            for(int j = 1; j <= 10; j++){
+                System.out.println(i + " x " + j + " = " + multiplicaNumero(numero));
+            }
+        }
+
     }
 }

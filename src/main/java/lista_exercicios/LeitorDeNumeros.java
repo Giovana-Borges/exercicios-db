@@ -2,13 +2,13 @@ package lista_exercicios;
 import java.util.Scanner;
 public class LeitorDeNumeros {
     public static void main(String[] args){
-        int num;
+        int numero;
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Digite um número: ");
-        num = scan.nextInt();
+        numero = scan.nextInt();
 
-        int resultadoLeitor = leitorNumeros(num, scan);
+        int resultadoLeitor = leitorNumeros(numero, scan);
         System.out.println("Você digitou o número " + resultadoLeitor + ", você acertou!");
         scan.close();
     }
