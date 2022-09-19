@@ -8,7 +8,10 @@ public class ExercicioTres {
     //Dada uma lista de 3 notas, calcule a média simples e, caso a média seja maior ou
     //igual a 7, retorne "Aluno aprovado :)", se for menor que 7, retorne "Aluno reprovado :(
     public static void main(String[] args){
-        double nota1, nota2, nota3, media;
+        double nota1 = 0;
+        double nota2 = 0;
+        double nota3 = 0;
+
 
         System.out.println("Calculando média simples de uma lista de 3 notas ");
         Scanner teclado = new Scanner(System.in);
@@ -29,15 +32,17 @@ public class ExercicioTres {
             System.out.println(lista);
         }
 
-        media = ((nota1 + nota2 + nota3) /3);
-        System.out.println("A média de notas deste aluno é " + media);
+        double resultadoMedia = calculaMedia(nota1, nota2, nota3);
+        System.out.println("A média de notas deste aluno é " + resultadoMedia);
+    }
+    public static double calculaMedia(double nota1, double nota2, double nota3){
+        double media = ((nota1 + nota2 + nota3) /3);
 
         if(media >= 7){
             System.out.println("Aluno aprovado :)");
         } else {
             System.out.println("Aluno reprovado :(");
         }
-
-
+        return media;
     }
 }

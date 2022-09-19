@@ -5,7 +5,15 @@ public class ExercicioSeis {
 	/*Printe meio triângulo. Com 15 linhas, cada linha deve ter um asterisco a mais do que
 	 a linha de cima. A primeira linha começa com 1 asterisco. */
 
-        int i, j;
+        int i = 0;
+        int j = 0;
+
+        int imprimePiramide = criaPiramide(i, j);
+        System.out.println(imprimePiramide);
+
+
+    }
+    public static int criaPiramide(int i, int j){
 
         for(i = 1; i <= 15; i++) {
             for(j = 15 - i; j >= 1; j--) {             //imprimir os espaços
@@ -16,8 +24,7 @@ public class ExercicioSeis {
             }
             System.out.printf("\n");
         }
-
-
+        return 0;
     }
 
 }

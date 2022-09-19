@@ -54,6 +54,6 @@ public class ExercicioDois {
             default:
                 System.out.println("Sinal de operação inválido");
         }
-        return false;
+        return true;
     }
 }

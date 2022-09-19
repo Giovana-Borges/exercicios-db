@@ -28,8 +28,10 @@ public class ExercicioCinco {
         if( ouro > piratas && somaOuroPiratas <= 100){
             System.out.println("Viagem bem sucedida");
             return true;
+        }else{
+            System.out.println("Seu navio afundou!");
         }
-        System.out.println(somaOuroPiratas);
+//        System.out.println(somaOuroPiratas);
         //retornará falso quando a quantidade de ouro for maior que a de piratas e quando a soma for maior que 100
         return false;
     }

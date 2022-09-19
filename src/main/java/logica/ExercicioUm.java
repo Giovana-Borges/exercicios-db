@@ -9,13 +9,11 @@ public class ExercicioUm {
         int [] numeros = {2, 4, 6, 8};
 
         System.out.println("Lista de números: ");
-        boolean listaSomada = somaNumeros(numeros);
-        System.out.println(listaSomada);
-
-
-
+        int listaSomada = somaNumeros(numeros);
+        System.out.println();
+        System.out.println("Soma de todos os números: " + listaSomada);
     }
-    public static boolean somaNumeros ( int numeros[]){
+    public static int somaNumeros ( int numeros[]){
         int soma = 0;
 
         //Acessando array
@@ -23,8 +21,6 @@ public class ExercicioUm {
             System.out.println(numeros[i]);
             soma += numeros[i]; //somando
         }
-        System.out.println();
-        System.out.println("Soma de todos os números: " + soma);
-        return true;
+        return soma;
     }
 }
