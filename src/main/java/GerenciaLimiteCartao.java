@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class TesteTecnico {
+public class GerenciaLimiteCartao {
     /* Implementar um gerenciador de limite de cartão de crédito.
     o As entradas são: limite e lista de compras;
     o A saída deve ser 1 se o limite foi excedido e 0 se o limite não foi;

@@ -6,7 +6,7 @@ public class CriaConta {
        boolean verificaTranferencia = false;
 
        //Instanciando primeira conta e relacionando ao primeiro cliente
-       Conta primeiraConta = new Conta(01, 1312);
+       Conta primeiraConta = new ContaCorrente(01, 1312);
        Cliente primeiroCliente = new Cliente("primeiroCliente", "000.000.000-00", "criador");
        primeiraConta.deposita(200);
        primeiraConta.setTitular(primeiroCliente);
@@ -18,13 +18,14 @@ public class CriaConta {
         System.out.println("NÚMERO: " + primeiraConta.getNumero());
         System.out.println("TITULAR: " + primeiraConta.getTitular().getNome());
 
+        System.out.println("==========================================");
+
         //Instanciando segunda conta e relacionando ao segundo cliente
-        Conta segundaConta = new Conta(02, 1213);
+        Conta segundaConta = new ContaCorrente(02, 1213);
         Cliente segundoCliente = new Cliente("segundoCliente", "999.999.999-99", "ajudante");
         segundaConta.deposita(100);
         segundaConta.setTitular(segundoCliente);
 
-        System.out.println("==========================================");
         System.out.println("SEGUNDA CONTA");
         System.out.println("SALDO INICIAL: " + segundaConta.getSaldo());
         System.out.println("AGENCIA: " + segundaConta.getAgencia());

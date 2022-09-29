@@ -1,9 +1,10 @@
 package bytebank;
 
-public class Cliente {
+public class Cliente implements Autenticavel {
     private String nome;
     private String cpf;
     private String profissao;
+    private int senha = 001;
 
     private static int totalClientes = 0;
 
@@ -38,5 +39,22 @@ public class Cliente {
 
     public static int getTotalClientes(){
         return Cliente.totalClientes;
+    }
+
+    @Override
+    public void setSenha(int senha) {
+        this.senha = senha;
+    }
+    @Override
+    public int getSenha(){
+        return senha;
+    }
+
+    @Override
+    public boolean autentica(int senha) {
+        if(this.senha == senha){
+            return true;
+        }
+        return false;
     }
 }

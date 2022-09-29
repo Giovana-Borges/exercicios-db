@@ -1,7 +1,7 @@
 package bytebank;
 
-public class Conta {
-    private double getSaldo;
+public abstract class Conta {
+    private double saldo;
     private int agencia;
     private int numero;
     private Cliente titular;
@@ -9,34 +9,33 @@ public class Conta {
     private static int totalContas = 0;
 
     public Conta(int agencia, int numero){
-        //atributo da classe que conta +1 toda vez que um objeto conta é instanciado
         Conta.totalContas++;
-        //atributos imutáveis (os setters não serão usados)
+        System.out.println("Total de contas atualizado: " + Conta.totalContas);
         this.agencia = agencia;
         this.numero = numero;
     }
 
     public void deposita(double valor) {
-        this.getSaldo += valor;
+        this.saldo += valor;
     }
     public boolean saca(double valor) {
 
-        if (this.getSaldo >= valor) {
-            this.getSaldo -= valor;
+        if (this.saldo >= valor) {
+            this.saldo -= valor;
             return true;
         }
         return false;
     }
     public boolean transfere(double valor, Conta destino) {
-        if (this.getSaldo >= valor) {
-            this.getSaldo -= valor;
+        if (this.saldo >= valor) {
+            this.saldo -= valor;
             destino.deposita(valor);
             return true;
         }
         return false;
     }
     public double getSaldo(){
-        return this.getSaldo;
+        return this.saldo;
     }
     public int getAgencia(){
         return this.agencia;

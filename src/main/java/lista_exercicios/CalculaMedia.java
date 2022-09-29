@@ -15,7 +15,6 @@ public class CalculaMedia {
         double imprimeResutaldoMedia = calculaMedia(listaDeNotas);
         System.out.println("A média de notas deste aluno é: " + imprimeResutaldoMedia);
 
-
         imprimeStatusDoAluno(listaDeNotas);
 
     }

@@ -3,7 +3,7 @@ package bytebank;
 public class TestaReferencia {
     public static void main(String[] args) {
         //DUAS REFERENCIAS DIFERENTES, APONTANDO PARA O MESMO OBJETO
-        Conta primeiraConta = new Conta(000, 1111);
+        Conta primeiraConta = new ContaCorrente(000, 1111);
         Conta segundaConta = primeiraConta;
 
         //primeiraConta.getSaldo() = 300;
