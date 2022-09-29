@@ -1,4 +1,4 @@
-package bytebank_herdado;
+package bytebank_encapsulado;
 
 public abstract class Funcionario {
     private String nome;

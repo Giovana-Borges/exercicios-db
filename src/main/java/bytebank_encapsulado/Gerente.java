@@ -1,4 +1,4 @@
-package bytebank_herdado;
+package bytebank_encapsulado;
 
 public class Gerente extends Funcionario implements Autenticavel{
     private AutenticacaoUtil autenticador;

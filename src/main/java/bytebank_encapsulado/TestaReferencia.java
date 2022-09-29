@@ -1,4 +1,4 @@
-package bytebank_herdado;
+package bytebank_encapsulado;
 
 public class TestaReferencia {
     public static void main(String[] args) {
